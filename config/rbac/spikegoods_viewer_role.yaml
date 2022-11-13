@@ -1,0 +1,20 @@
+# permissions for end users to view spikegoods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: spikegoods-viewer-role
+rules:
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - spikegoods
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - spikegoods/status
+  verbs:
+  - get

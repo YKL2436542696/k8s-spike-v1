@@ -1,0 +1,24 @@
+# permissions for end users to edit buyers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: buyer-editor-role
+rules:
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - buyers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - buyers/status
+  verbs:
+  - get

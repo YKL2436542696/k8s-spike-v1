@@ -1,0 +1,20 @@
+# permissions for end users to view sellers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: seller-viewer-role
+rules:
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - sellers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - sellers/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit spikegoods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: spikegoods-editor-role
+rules:
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - spikegoods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - myapp.spike.com
+  resources:
+  - spikegoods/status
+  verbs:
+  - get

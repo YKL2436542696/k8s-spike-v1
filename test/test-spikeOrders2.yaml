@@ -1,0 +1,11 @@
+apiVersion: myapp.spike.com/v1
+kind: SpikeOrder
+metadata:
+  name: order2
+  namespace: default
+spec:
+  buyerId: "ece984e9-2afe-44c7-a00a-3a7de30cf141"
+  goodsMap: {"049ce7ad-a143-4cde-a3d9-4ecd05bb022a":2}
+  isPay: false
+
+

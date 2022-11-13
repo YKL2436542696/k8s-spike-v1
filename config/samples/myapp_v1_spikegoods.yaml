@@ -1,0 +1,6 @@
+apiVersion: myapp.spike.com/v1
+kind: SpikeGoods
+metadata:
+  name: spikegoods-sample
+spec:
+  # TODO(user): Add fields here
